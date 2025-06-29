@@ -12,12 +12,12 @@ public class Solution
 
     public int CountOddLetters(int input)
     {
-        int[] frequency = createFrequency(input);
+        int[] frequency = CreateFrequency(input);
 
         int numberOfOddLetters = 0;
         foreach (int current in frequency)
         {
-            if (isOdd(current))
+            if (IsOdd(current))
             {
                 ++numberOfOddLetters;
             }
@@ -25,7 +25,7 @@ public class Solution
         return numberOfOddLetters;
     }
 
-    private int[] createFrequency(int input)
+    private int[] CreateFrequency(int input)
     {
         int[] frequency = new int[ALPHABET_SIZE];
         while (input > 0)
@@ -40,7 +40,7 @@ public class Solution
         return frequency;
     }
 
-    private bool isOdd(int value)
+    private bool IsOdd(int value)
     {
         return value % 2 == 1;
     }
